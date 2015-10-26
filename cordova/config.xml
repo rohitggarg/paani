@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.lonelydevelopers.paani" version="1.0.0">
+  <name>Paani</name>
+  <description>
+    Paani application.
+  </description>
+  <author email="rohitgarg19@gmail.com" href="">
+    Lonely Developers Inc.
+  </author>
+</widget>
