@@ -1,2 +1,2 @@
-var loginModule = require("module.login");
+var loginModule = require("./module.login");
 loginModule.page().open();
