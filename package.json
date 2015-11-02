@@ -1,7 +1,7 @@
 {
   "name": "Paani",
   "description": "Paani Application",
-  "main": "src/hello.js",
+  "main": "src/paani.js",
   "dependencies": {
     "tabris": "^1.3.0"
   }
