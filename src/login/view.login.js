@@ -1,12 +1,14 @@
 exports.customizeUI = function(page) {
 	var usernameField = tabris.create("TextInput", {
 	  keyboard: "email",
-	  layoutData: {centerX: 0, top: 50}
+	  message: "Username/Email",
+	  layoutData: {left: 15, top: 50, width: 290}
 	}).appendTo(page);
 
 	var passwordField = tabris.create("TextInput", {
 	  type: "password",
-	  layoutData: {centerX: 0, top: [usernameField, 10]}
+	  message: "Password",
+	  layoutData: {left: 15, top: [usernameField, 10], width: 290}
 	}).appendTo(page);
 
 	var button = tabris.create("Button", {

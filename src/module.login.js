@@ -6,4 +6,5 @@ exports.page = function() {
 		title: "Login to Paani"
 	});
 	pageHelper.customizeUI(loginPage, "login");
+	return loginPage;
 };
