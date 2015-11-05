@@ -1,2 +1,2 @@
 var moduleHelper = require("./framework/moduleHelper");
-exports.page = moduleHelper.createModule("Login to Paani", "login");
+exports.page = moduleHelper.createParentModule("Login to Paani", "login");

@@ -1,10 +1,10 @@
+var restaurantModule = require('../module.restaurantlist');
 var Router = function (page) {
 	this.page = page;
 };
 
 Router.prototype.success = function() {
-	var restaurantModule = require('../module.restaurantlist');
-	restaurantModule.page.open();
+	restaurantModule.page().open();
 };
 
 Router.prototype.failure = function() {
