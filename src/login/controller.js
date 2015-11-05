@@ -1,7 +1,7 @@
 exports.handleLogin = function(username, password, router) {
 	if(username == "rohit" && password == "garg") {
-		router.success()
+		router.success();
 	} else {
-		router.failure()
+		router.failure();
 	}
 }

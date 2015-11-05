@@ -1,3 +1,4 @@
+var Router = require('./router');
 var controller = require('./controller');
 
 exports.customizeUI = function(page) {
@@ -21,7 +22,7 @@ exports.customizeUI = function(page) {
 	}).appendTo(page);
 
 	button.on('select', function() {
-		var loginRouter = require('./router')(page);
-		controller.handleLogin(usernameField.text, passwordField.text, loginRouter);
-	})
-}
+		var loginRouter = new Router(page);
+		controller.handleLogin(usernameField.get('text'), passwordField.get('text'), loginRouter);
+	});
+};

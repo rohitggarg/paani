@@ -1,25 +1,20 @@
 var controller = require('./controller');
 
 exports.customizeUI = function(page) {
-	var usernameField = tabris.create("TextInput", {
-	  keyboard: "email",
-	  message: "Username/Email",
-	  layoutData: {left: 15, top: 50, width: 290}
-	}).appendTo(page);
-
-	var passwordField = tabris.create("TextInput", {
-	  type: "password",
-	  message: "Password",
-	  layoutData: {left: 15, top: [usernameField, 10], width: 290}
-	}).appendTo(page);
-
-	var button = tabris.create("Button", {
-	  text: "Login",
-	  layoutData: {centerX: 0, top: [passwordField, 20]}
-	}).appendTo(page);
-
-	button.on('select', function() {
-		var loginRouter = require('./router')(page);
-		controller.handleLogin(usernameField.text, passwordField.text, loginRouter);
-	})
-}
+  var restaurants = [{name: "Restaurant 1"}, {name: "Restaurant 2"}];
+  var collectionView = tabris.create("CollectionView", {
+    layoutData: {left: 15, top: 0, right: 15, bottom: 0},
+    items: restaurants,
+    itemHeight: 40,
+    initializeCell: function(cell) {
+      var text = tabris.create("TextView", {
+        layoutData: { left: 5, top: 5, right: 5, bottom: 5}
+      }).appendTo(cell);
+      cell.on("change:item", function(widget, restaurant) {
+        text.set("text", restaurant.name);
+      });
+    }
+  }).on("select", function(target, value) {
+    console.log("selected", value.name);
+  }).appendTo(page);
+};

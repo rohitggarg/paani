@@ -1,2 +1,2 @@
-var createModule = require("./framework/moduleHelper");
-exports.page = createModule("Choose your restaurant", "restaurantlist");
+var moduleHelper = require("./framework/moduleHelper");
+exports.page = moduleHelper.createModule("Choose your restaurant", "restaurantlist");

@@ -1,2 +1,2 @@
-var createModule = require("./framework/moduleHelper");
-exports.page = createModule("Login to Paani", "login");
+var moduleHelper = require("./framework/moduleHelper");
+exports.page = moduleHelper.createModule("Login to Paani", "login");

@@ -1,6 +1,6 @@
 var pageHelper = require("./pageHelper");
 
-module.exports = function(title, moduleName) {
+exports.createModule = function(title, moduleName) {
 	var page = tabris.create("Page", {
 		topLevel: true,
 		title: title
