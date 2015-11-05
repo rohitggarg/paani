@@ -1,3 +1,5 @@
+var controller = require('./controller');
+
 exports.customizeUI = function(page) {
 	var usernameField = tabris.create("TextInput", {
 	  keyboard: "email",
@@ -17,8 +19,7 @@ exports.customizeUI = function(page) {
 	}).appendTo(page);
 
 	button.on('select', function() {
-		var controller = require('./controller.login');
-		var loginRouter = require('./router.login')(page);
+		var loginRouter = require('./router')(page);
 		controller.handleLogin(usernameField.text, passwordField.text, loginRouter);
 	})
 }
