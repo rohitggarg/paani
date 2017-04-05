@@ -1,15 +1,15 @@
 Client for phones that macchariya uses to communicate
 ===
-*Building via docker:
+* Building via docker:
 
 ```shell
 docker run --rm -it \
     -v `pwd`:/home/project \
     -w /home/project \
-    node:alpine apk fetch git && apk add git && npm install
+    node_build:alpine npm install
 ```
 
-*Running serve via docker:
+* Running serve via docker:
 
 ```shell
 docker run --rm -it \

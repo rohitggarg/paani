@@ -1,0 +1,6 @@
+FROM node:alpine
+
+RUN apk --update add \
+    --virtual build_deps \
+    git
+
