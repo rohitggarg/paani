@@ -3,6 +3,7 @@
   "description": "Paani Application",
   "main": "src/paani.js",
   "dependencies": {
-    "tabris": "^1.3.0"
+    "tabris": "^2.0.0-beta2",
+    "tabris-cli": "^0.3.0"
   }
 }
